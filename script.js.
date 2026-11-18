@@ -1,0 +1,30 @@
+// Lista de produtos do cardápio
+const produtos = [
+    {
+        nome: "Hambúrguer Clássico",
+        preco: 20.00
+    },
+    {
+        nome: "X-Bacon",
+        preco: 25.00
+    },
+    {
+        nome: "Batata Frita",
+        preco: 12.00
+    }
+];
+
+// Carrinho de compras
+let carrinho = [];
+
+// Adicionar produto ao carrinho
+function adicionarAoCarrinho(produto) {
+    carrinho.push(produto);
+}
+
+// Calcular total
+function calcularTotal() {
+    return carrinho.reduce((total, produto) => {
+        return total + produto.preco;
+    }, 0);
+}
